@@ -1,7 +1,11 @@
 import * as React from 'react';
 import * as toxicity from '@tensorflow-models/toxicity';
+import styled from 'styled-components'
 
-import { Wrapper, Hr, Button, Textarea, H1, P, A, Response } from './styled'
+import { Hr, Textarea, H1, P, A } from '../styled/misc'
+import { Button } from '../styled/buttons';
+import { Wrapper } from '../styled/containers';
+import { darkBlue } from '../styled/colors';
 
 const threshold = 0.9;
 const labelsToInclude = ['toxicity', 'severe_toxicity', 'identity_attack', 'insult', 'threat', 'sexual_explicit', 'obscene'];
@@ -15,6 +19,13 @@ interface tfPrediction {
     label: string,
     results: Array<tfResult>,
 };
+
+export const Response = styled.div`
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: ${darkBlue};
+`;
 
 type tfPredictions = Array<tfPrediction>;
 
