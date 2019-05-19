@@ -10,11 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tensorflow-models/toxicity": "^1.0.3",
     "@tensorflow/tfjs": "^1.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-spring": "^8.0.20"
+    "react-spring": "^8.0.20",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
